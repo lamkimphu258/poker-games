@@ -1,0 +1,39 @@
+@import "../App.css";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.navbar .navbar__link__item {
+  margin: px 0;
+  font-size: 30px;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+.navbar .navbar__link:link {
+  text-decoration: none;
+}
+
+.navbar .navbar__link:hover {
+  background-color: var(--secondary-color);
+}
+
+.navbar__top {
+  height: 20px;
+  background-color: var(--black);
+}
+
+@media (max-width: 1400px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373737;
+  }
+}

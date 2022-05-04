@@ -1,0 +1,149 @@
+@import "../App.css";
+
+.gamefeed {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 300px);
+  row-gap: 30px;
+  column-gap: 0;
+  margin: 50px;
+  justify-items: center;
+}
+
+.gamefeed .gamefeed__item {
+  position: relative;
+}
+
+.gamefeed .gamefeed__item__image {
+  border-radius: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gamefeed .gamefeed__item .gamefeed__item__image__container {
+  position: relative;
+}
+
+.gamefeed
+  .gamefeed__item
+  .gamefeed__item__image__container
+  .gamefeed__item__overlay {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+  color: var(--white);
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.gamefeed .gamefeed__item .gamefeed__item__jackpot {
+  font-weight: bold;
+}
+
+.gamefeed .gamefeed__item .gamefeed__item__ribbon {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+.gamefeed .gamefeed__item .gamefeed__item__ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: var(--primary-color);
+  background: linear-gradient(#8dc63f 0%, #79a70a 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  right: -21px;
+}
+
+.gamefeed .gamefeed__item .gamefeed__item__ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79a70a;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79a70a;
+}
+
+.gamefeed .gamefeed__item .gamefeed__item__ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79a70a;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79a70a;
+}
+
+.gamefeed
+  .gamefeed__item
+  .gamefeed__item__image__container
+  .gamefeed__item__image:hover {
+  cursor: pointer;
+}
+
+.no__data__message {
+  width: 100vw;
+  text-align: center;
+}
+
+@media (max-width: 1600px) {
+  .gamefeed {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 300px);
+    row-gap: 30px;
+    column-gap: 0;
+    margin: 50px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gamefeed {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 300px);
+    row-gap: 30px;
+    column-gap: 0;
+    margin: 50px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .gamefeed {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 300px);
+    row-gap: 30px;
+    column-gap: 0;
+    margin: 50px;
+    justify-items: center;
+  }
+}
